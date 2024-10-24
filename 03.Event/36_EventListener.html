@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Example</title>
+</head>
+<body style = "background-color: black; color:white">
+    <h1 >animals</h1>
+    <ul class = "animals"> 
+    <li> <img src="../03.Event/images/owl.jpg" id="owl" alt="owl" width="300" height="200"> </li>
+    <li> <img src="../03.Event/images/tiger.jpg" id="tiger" alt="tiger" width="400" height="300"> </li>
+    <li><a href="https://www.google.com/search?q=ALISHA+AGT&rlz=1C1YTUH_enIN1033IN1033&oq=ALISHA+AGT+&aqs=chrome..69i64.14475j0j7&sourceid=chrome&ie=UTF-8" target = "_blank"> Google </a></li>
+    </ul>
+</body>
+<script> 
+    // document.getElementById('owl').onclick = (function(){
+    //     alert("owl") ; 
+    // })
+    // out dated way of adding an click event , offers less functions too 
+    // how to do than ? 
+
+    /*
+    document.querySelector("#owl").addEventListener('click' , function(e){
+        console.log(e) ; 
+        alert("owl") ; 
+    })
+    */
+
+    // attachEvent() 
+    // jquery - on 
+
+    // default , timestamp , defaultPrevented 
+    // target , currentTarget , toElement , srcElement 
+    // clientX , clientY , screenX , screenY 
+    // altkey , ctrlkey , shiftekey , keycode , 
+
+
+    //--------------------- Bubbling and Capturing ------------------------
+    // document.getElementById("owl").addEventListener("click" , function(e){
+    //     console.log("owl is clicked") ; 
+    //     e.stopPropagation() ; 
+
+    // }, )
+    // document.querySelector(".animals").addEventListener("click" , function(e){
+    //     console.log("animal is clicked") ; 
+    // }, )
+
+    //  BUBBLING - both false(default) - bottom to top - child to parent
+    // propagation - both true - top to bottom 
+
+
+
+    // remove images on clicking them 
+    document.querySelector(".animals").addEventListener('click' , function(e){
+        console.log(e.target.tagName) ; 
+        if(e.target.tagName == "IMG" || e.target.tagName == 'A'){
+            const removeItem = e.target.parentNode ; 
+            // removeItem.remove() ; 
+            removeItem.parentNode.removeChild(removeItem) ;
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

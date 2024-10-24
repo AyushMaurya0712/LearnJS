@@ -10,7 +10,7 @@ const {LevelOfIntelligence : iq  } = obj ;
 console.log(iq) ; 
 
 // whenever we call an api it returns a json file 
-{
-    "persons" : "8" , 
-    "batch " : "Btech" , 
-}
+// {
+//     "persons" : "8" , 
+//     "batch " : "Btech" , 
+// }

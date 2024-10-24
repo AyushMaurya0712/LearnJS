@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning js </title>
+</head>
+<body style = "background-color: black; color : white">
+    <h1> learn js </h1>
+    <button type="button" id = "start">Start</button>
+    <button type="button" class="stop"> click to stop </button>  
+
+</body>
+<script> 
+    const f1 = function(message){ 
+        console.log(`${message} : ${Date.now()}` )
+    }
+    let timeout ;
+    document.querySelector("#start").addEventListener("click" , function(e){
+        timeout = setInterval(f1 , 500 , "time is ");
+    }) ; 
+
+    document.querySelector(".stop").addEventListener("click" , function(e){
+        clearTimeout(timeout) ; 
+    })
+
+
+
+</script>
+</html>

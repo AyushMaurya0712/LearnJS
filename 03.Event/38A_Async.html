@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning js </title>
+</head>
+<body style = "background-color: black; color : white">
+    <h1> learn js </h1>
+    <button type="button" class="stop"> click to stop </button>  
+
+</body>
+<script> 
+    const f1 = function(){
+        document.querySelector('h1').innerHTML = "learning js" ; 
+    }
+    const display = setTimeout(f1 , 3000) ; 
+
+    document.querySelector(".stop").addEventListener("click" , function(e){
+        clearTimeout(display) ; 
+        console.log("Interrupted") ; 
+    })
+
+
+
+
+</script>
+</html>

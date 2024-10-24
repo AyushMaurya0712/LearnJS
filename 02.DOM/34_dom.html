@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pite rho </title>
+</head>
+<body  style = "background-color : black ; color : rgb(195, 14, 54)">
+    
+</body>
+<script> 
+    const div = document.createElement('div') ; 
+    div.className = "eppi fizz" ; 
+    div.id = Math.ceil(Math.random() * 10) ; 
+    div.setAttribute("title" , "drink") ; 
+    div.style.padding = "20px" ; 
+    div.style.backgroundColor = "white" ; 
+    // div.innerText = "It contains a lots of calories" ; 
+    const addText = document.createTextNode("It contains calories") ; 
+    div.appendChild(addText) ; 
+    console.log(div) ; 
+
+    document.body.appendChild(div) ; 
+
+
+
+</script> 
+</html>
