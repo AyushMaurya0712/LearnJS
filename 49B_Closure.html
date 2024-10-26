@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style = "background-color: black; color : white">
+    <button id = "green"> Green </button>
+    <button id = "blue"> blue </button>
+
+    
+</body>
+<script> 
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = "green" ; 
+    // }
+
+    // document.getElementById("blue").onclick = function(){
+    //     document.body.style.backgroundColor = "blue" ; 
+    // }
+
+    // if there are 100 button we cant write code for each like this 
+    // so here comes the concept of closures 
+
+    function changeColor(color){
+        return function(){
+            document.body.style.backgroundColor = color ; 
+        }
+    }
+
+    document.getElementById("green").onclick = changeColor("green") ; 
+    document.getElementById("blue").onclick = changeColor("blue") ; 
+
+
+
+
+</script> 
+
+</html>
